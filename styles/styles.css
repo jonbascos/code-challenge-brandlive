@@ -11,13 +11,16 @@ body {
 }
 
 /* Hero Section Styling */
-
-.heroSection {
+.heroSectionContainer {
     display: flex;
     flex-direction: column;
-    background-color: #80E1FB;
+    justify-content: center;;
     padding: 20px;
-    width: 100%;
+    width:100%;
+    background-color: #80E1FB;
+}
+.heroSection {
+    text-align: center;
 }
 
 .eventDate {
@@ -33,8 +36,8 @@ body {
 
 .timer {
     display: flex;
-    justify-content: left;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 30px;
     font-size: 1.5em;
 }
 
@@ -65,6 +68,10 @@ body {
 .timer-label-seconds {
     color: white;
     font-size: .8em;
+}
+
+.wowImageContainer {
+    text-align: center;
 }
 
 .wowImage {
@@ -168,7 +175,6 @@ footer {
     padding: 0 20px;
     text-transform: uppercase;
     font-size: .8em;
-    order: 3;
 }
 
 .logos {
@@ -195,20 +201,26 @@ footer {
 
     /* Hero Section Desktop Styling */
     .heroSection {
+        display: flex;
         flex-direction: row;
-        justify-content: space-around;    
+        align-items: center;
+        text-align: left;
+        margin: auto;
     }
 
     .hero-left {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
         height: 100%;
-        padding: 125px;
     }
 
     .headline {
         max-width: 250px;
+    }
+
+    .timer {
+        justify-content: left;
     }
 
     .info,
@@ -217,11 +229,12 @@ footer {
         max-width: 550px;
     }
 
-    .wowImage {
+    .wowImageContainer {
+        text-align: left;
+    }
+
+    .wowImage {       
         max-width: 500px;
-        max-height: 500px;
-        margin-top: 5px;
-        margin-right: 500px;
     }
 
     /* Speakers Section Desktop Styling */
@@ -270,8 +283,6 @@ footer {
     /* Sponsor Section Desktop Styling */
 
     .sponsorSection {
-        /* background-position: top -50px; */
-        background-size: cover;
         background-position: top right -700px;
     }
 
@@ -295,20 +306,26 @@ footer {
   and (-webkit-min-device-pixel-ratio: 2) {
 
     /* Hero Section Tablet Styling */
-    .heroSection {
+    
+    /* .heroSectionContainer {
         flex-direction: row;
-        justify-content: space-around;    
+    } */
+
+    .heroSection {
+        display: flex;
+        flex-direction: row;
     }
 
     .hero-left {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        text-align: left;
         height: 100%;
         padding: 125px;
     }
 
     .headline {
+        text-align: left;
         max-width: 250px;
     }
 
@@ -316,6 +333,10 @@ footer {
     .eventDate {
         font-size: 1.25em;
         max-width: 550px;
+    }
+
+    .timer {
+        justify-content: left;    
     }
 
     .timer-days {
@@ -358,7 +379,6 @@ footer {
     /* Speakers Section Tablet Styling */
 
     .speakersSection {
-        /* padding: 100px 20px; */
         margin-top: 100px;
     }
 
@@ -395,7 +415,6 @@ footer {
     /* Sponsor Section Tablet Styling */
 
     .sponsorSection {
-        /* background-position: top -50px; */
         background-size: cover;
         background-position: top right -500px;
     }
@@ -417,6 +436,12 @@ footer {
     and (max-device-width: 1024px) 
     and (orientation: portrait) 
     and (-webkit-min-device-pixel-ratio: 2) {
+       
+        /* Hero Section Tablet Portrait Styling */
+       
+        .headline {
+            margin: auto;
+        }
 
         .timer-label-hours,
         .timer-label-minutes {
@@ -428,7 +453,8 @@ footer {
         }
 
         .wowImage {
-            max-width: 400px;
+            margin-top: 100px;
+            max-width: 325px;
         }
   }
 }
