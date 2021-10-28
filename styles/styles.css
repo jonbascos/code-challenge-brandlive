@@ -1,3 +1,7 @@
+/*
+    Google Font: Source Sans Pro
+*/
+
 * {
     margin: 0; 
     padding: 0;
@@ -8,6 +12,7 @@ body {
     font-size: 16px;
     width: 100%;
     line-height: 1.2em;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Hero Section Styling */
@@ -25,10 +30,12 @@ body {
 
 .eventDate {
     text-transform: uppercase;
+    font-weight: bolder;
 }
 
 .headline {
     font-size: 2em;
+    font-weight: bold;
     color: white;
     padding: 25px 0;
     line-height: 1.2em;
@@ -206,6 +213,7 @@ footer {
         align-items: center;
         text-align: left;
         margin: auto;
+        letter-spacing: 1px;
     }
 
     .hero-left {
@@ -216,7 +224,8 @@ footer {
     }
 
     .headline {
-        max-width: 250px;
+        color: white;
+        max-width: 400px;
     }
 
     .timer {
@@ -225,8 +234,8 @@ footer {
 
     .info,
     .eventDate {
-        font-size: 1.25em;
-        max-width: 550px;
+        font-size: 1.2em;
+        max-width: 400px;
     }
 
     .wowImageContainer {
@@ -302,14 +311,10 @@ footer {
 
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  /* and (max-device-width: 1024px)  */
   and (-webkit-min-device-pixel-ratio: 2) {
 
     /* Hero Section Tablet Styling */
-    
-    /* .heroSectionContainer {
-        flex-direction: row;
-    } */
 
     .heroSection {
         display: flex;
@@ -329,11 +334,11 @@ footer {
         max-width: 250px;
     }
 
-    .info,
+    /* .info,
     .eventDate {
         font-size: 1.25em;
         max-width: 550px;
-    }
+    } */
 
     .timer {
         justify-content: left;    
