@@ -417,8 +417,18 @@ footer {
     and (max-device-width: 1024px) 
     and (orientation: portrait) 
     and (-webkit-min-device-pixel-ratio: 2) {
+
+        .timer-label-hours,
+        .timer-label-minutes {
+            margin: 0px 15px;
+        }
+
         .timer-label-seconds {
-            margin: 0px 15px
+            margin: 0px 7px
+        }
+
+        .wowImage {
+            max-width: 400px;
         }
   }
 }
