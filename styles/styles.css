@@ -1,0 +1,424 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    width: 100%;
+    line-height: 1.2em;
+}
+
+/* Hero Section Styling */
+
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #80E1FB;
+    padding: 20px;
+    width: 100%;
+}
+
+.eventDate {
+    text-transform: uppercase;
+}
+
+.headline {
+    font-size: 2em;
+    color: white;
+    padding: 25px 0;
+    line-height: 1.2em;
+}
+
+.timer {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.timer-days {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.timer-hours,
+.timer-minutes,
+.timer-seconds {
+    margin: 0 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.timer-label-hours {
+    margin: 0 25px;
+}
+
+.timer-label-seconds {
+    margin: 0px 25px;
+}
+
+.timer-label-days,
+.timer-label-hours,
+.timer-label-minutes,
+.timer-label-seconds {
+    color: white;
+    font-size: .8em;
+}
+
+.wowImage {
+    max-width: 350px;
+}
+
+/* Speakers Section Styles */
+
+.speakersContainer {
+    background-image: url('../images/01_Bluedrip_2x.png');
+    padding: 10px;
+}
+
+.title,
+.subject {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.description {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.speakerProfileCard {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.profilePicture {
+    height: 250px;
+    width: 250px;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+.speakerName,
+.speakerTitle {
+    font-weight: bolder;
+}
+
+.speakerName {
+    font-size: 1.3em;
+}
+
+/* Our Product Section Styling */
+
+.productSection {
+    background: url('../images/02_Yellowdrip_2x.png');
+    background-size: cover;
+    background-position: top left 10px;
+    padding: 100px;
+
+}
+
+.video {
+    text-align: center;
+}
+
+.videoScreenShot {
+    max-width: 250px;
+}
+
+/* Sponsor Section Styling */
+
+.sponsorSection {
+    padding-top: 100px;
+    width: 100%;
+    background: url('../images/03_Pinkdrip_2x.png');
+    background-size: cover;
+    background-position: top left -600px;
+ }
+
+.sponsorLogoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sponsorLogo {
+    width: 150px;
+    height: 150px;
+}
+
+/* Footer Styling */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: .8em;
+    order: 3;
+}
+
+.logos {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.footerLinks ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+/* Media Queries */
+
+/* Desktop */
+
+@media screen 
+    and (min-width: 1200px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+    /* Hero Section Desktop Styling */
+    .heroSection {
+        flex-direction: row;
+        justify-content: space-around;    
+    }
+
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 125px;
+    }
+
+    .headline {
+        max-width: 250px;
+    }
+
+    .info,
+    .eventDate {
+        font-size: 1.25em;
+        max-width: 550px;
+    }
+
+    .wowImage {
+        max-width: 500px;
+        max-height: 500px;
+        margin-top: 5px;
+        margin-right: 500px;
+    }
+
+    /* Speakers Section Desktop Styling */
+
+    .speakersContainer {
+        background-size: cover;
+        background-position: top left 450px;
+    }
+    
+    .speakersSection {
+        margin-top: 100px;
+    }
+
+    .speakerProfileContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .speakerProfileCard {
+        margin: 35px;
+    }
+
+    .profileInfo {
+        line-height: 1.5em;
+        max-width: 250px;
+        text-align: left;
+    }
+
+    /* Our Product Section Desktop Styling */
+
+    .productSection {
+        height: 650px;
+        background-size: cover;
+        background-position: top left 400px;
+    }
+
+    .description {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .videoScreenShot {
+        max-width: 500px;
+    }
+    
+    /* Sponsor Section Desktop Styling */
+
+    .sponsorSection {
+        /* background-position: top -50px; */
+        background-size: cover;
+        background-position: top right -700px;
+    }
+
+    .sponsorLogoContainer {
+        flex-direction: row;
+        justify-content: center;
+        padding: 50px 0px;
+    }
+
+    .sponsorLogo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Tablet */
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    /* Hero Section Tablet Styling */
+    .heroSection {
+        flex-direction: row;
+        justify-content: space-around;    
+    }
+
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 125px;
+    }
+
+    .headline {
+        max-width: 250px;
+    }
+
+    .info,
+    .eventDate {
+        font-size: 1.25em;
+        max-width: 550px;
+    }
+
+    .timer-days {
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    
+    .timer-hours,
+    .timer-minutes,
+    .timer-seconds {
+        margin: 0 20px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .timer-label-hours {
+        margin: 0 25px;
+    }
+    
+    .timer-label-seconds {
+        margin: 0px 25px;
+    }
+    
+    .timer-label-days,
+    .timer-label-hours,
+    .timer-label-minutes,
+    .timer-label-seconds {
+        color: white;
+        font-size: .8em;
+    }
+    
+
+    .wowImage {
+        max-width: 400px;
+        max-height: 400px;
+        margin-top: 50px;
+        margin-right: 45px;
+    }
+
+    /* Speakers Section Tablet Styling */
+
+    .speakersSection {
+        /* padding: 100px 20px; */
+        margin-top: 100px;
+    }
+
+    .speakerProfileContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .speakerProfileCard {
+        margin: 0 10px;
+    }
+
+    .profileInfo {
+        line-height: 1.5em;
+        max-width: 250px;
+        text-align: left;
+    }
+
+    /* Our Product Section Tablet Styling */
+
+    .productSection {
+        height: 650px;
+    }
+
+    .description {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .videoScreenShot {
+        max-width: 500px;
+    }
+    
+    /* Sponsor Section Tablet Styling */
+
+    .sponsorSection {
+        /* background-position: top -50px; */
+        background-size: cover;
+        background-position: top right -500px;
+    }
+
+    .sponsorLogoContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sponsorLogo {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Tablet: Portrait */
+
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .timer-label-seconds {
+            margin: 0px 15px
+        }
+  }
+}
