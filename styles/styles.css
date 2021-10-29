@@ -9,7 +9,6 @@
 }
 
 body {
-    font-size: 16px;
     width: 100%;
     line-height: 1.2em;
     font-family: 'Source Sans Pro', sans-serif;
@@ -19,13 +18,14 @@ body {
 .heroSectionContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;;
+    justify-content: center;
     padding: 20px;
     width:100%;
     background-color: #80E1FB;
 }
 .heroSection {
     text-align: center;
+
 }
 
 .eventDate {
@@ -34,47 +34,42 @@ body {
 }
 
 .headline {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
     color: white;
     padding: 25px 0;
     line-height: 1.2em;
 }
 
-.timer {
+#timer {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     font-size: 1.5em;
 }
 
-.timer-days {
+#timerDays {
     margin-right: 20px;
     font-weight: bold;
+    color: black;
 }
 
-.timer-hours,
-.timer-minutes,
-.timer-seconds {
+#timerHours,
+#timerMinutes,
+#timerSeconds {
     margin: 0 20px;
     padding-bottom: 10px;
     font-weight: bold;
 }
 
-.timer-label-hours {
-    margin: 0 25px;
-}
-
-.timer-label-seconds {
-    margin: 0px 25px;
-}
-
-.timer-label-days,
-.timer-label-hours,
-.timer-label-minutes,
-.timer-label-seconds {
+#timerLabelDays,
+#timerLabelHours,
+#timerLabelMinutes,
+#timerLabelSeconds {
+    text-transform: uppercase;
     color: white;
     font-size: .8em;
+    margin: 0px 10px
 }
 
 .wowImageContainer {
@@ -127,6 +122,58 @@ body {
 
 .speakerName {
     font-size: 1.3em;
+}
+
+/* Modal styling */
+
+.modal-open {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+    display:none;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.8);
+    margin-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 8px 24px;
+    border-radius: 4px;
+    z-index: 4;
+}
+
+.modal-header {
+    font-weight: 500;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 2em;
+}
+
+.modal-header .modal-close {
+    float: right;
+    font-size: 20px;
+    background: #80E1FB;
+    padding: 2px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal-main {
+    color: #333;
+    padding: 15px 0;
 }
 
 /* Our Product Section Styling */
@@ -207,6 +254,11 @@ footer {
     and (-webkit-min-device-pixel-ratio: 1) {
 
     /* Hero Section Desktop Styling */
+
+    .heroSectionContainer {
+        margin-top: 10px;
+    }
+
     .heroSection {
         display: flex;
         flex-direction: row;
@@ -216,7 +268,7 @@ footer {
         letter-spacing: 1px;
     }
 
-    .hero-left {
+    .heroLeft {
         display: flex;
         flex-direction: column;
         justify-content: left;
@@ -225,17 +277,28 @@ footer {
 
     .headline {
         color: white;
-        max-width: 400px;
+        max-width: 500px;
+        font-size: 3.5em;
     }
 
-    .timer {
+    #timer {
         justify-content: left;
+    }
+
+    #timerLabelHours,
+    #timerLabelMinutes,
+    #timerLabelSeconds {
+        margin: 0 5px
+    }
+
+    #timerLabelDays {
+        margin-left: -5px;
     }
 
     .info,
     .eventDate {
         font-size: 1.2em;
-        max-width: 400px;
+        max-width: 600px;
     }
 
     .wowImageContainer {
@@ -270,6 +333,14 @@ footer {
         line-height: 1.5em;
         max-width: 250px;
         text-align: left;
+    }
+
+    /* Speaker Section Modal Styling - Desktop */
+
+       
+    .modal-content {
+        width: 500px;
+        padding: 8px 24px;
     }
 
     /* Our Product Section Desktop Styling */
@@ -311,7 +382,6 @@ footer {
 
 @media only screen 
   and (min-device-width: 768px) 
-  /* and (max-device-width: 1024px)  */
   and (-webkit-min-device-pixel-ratio: 2) {
 
     /* Hero Section Tablet Styling */
@@ -321,7 +391,7 @@ footer {
         flex-direction: row;
     }
 
-    .hero-left {
+    .heroLeft {
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -334,46 +404,35 @@ footer {
         max-width: 250px;
     }
 
-    /* .info,
-    .eventDate {
-        font-size: 1.25em;
-        max-width: 550px;
-    } */
-
-    .timer {
+    #timer {
         justify-content: left;    
     }
 
-    .timer-days {
+    #timerDays {
         margin-right: 20px;
         font-weight: bold;
     }
     
-    .timer-hours,
-    .timer-minutes,
-    .timer-seconds {
+    #timerHours,
+    #timerMinutes,
+    #timerSeconds {
         margin: 0 20px;
         padding-bottom: 10px;
         font-weight: bold;
     }
     
-    .timer-label-hours {
-        margin: 0 25px;
-    }
+    #timerLabelDays {
+        margin-left: -5px;
+    } 
     
-    .timer-label-seconds {
-        margin: 0px 25px;
-    }
-    
-    .timer-label-days,
-    .timer-label-hours,
-    .timer-label-minutes,
-    .timer-label-seconds {
+    #timerLabelDays,
+    #timerLabelHours,
+    #timerLabelMinutes,
+    #timerLabelSeconds {
         color: white;
         font-size: .8em;
     }
     
-
     .wowImage {
         max-width: 400px;
         max-height: 400px;
@@ -443,23 +502,29 @@ footer {
     and (-webkit-min-device-pixel-ratio: 2) {
        
         /* Hero Section Tablet Portrait Styling */
+
+       .heroSection {
+            flex-direction: column;
+        }
        
         .headline {
-            margin: auto;
+            max-width: 500px;
         }
 
-        .timer-label-hours,
-        .timer-label-minutes {
-            margin: 0px 15px;
-        }
+        #timerLabelHours,
+        #timerLabelMinutes,
+        #timerLabelSeconds {
+            color: white;
+            font-size: .8em;
+            margin: 0px 5px;
+    }
 
-        .timer-label-seconds {
-            margin: 0px 7px
+        .wowImageContainer {
+            margin-bottom: 20px;
         }
 
         .wowImage {
-            margin-top: 100px;
-            max-width: 325px;
+           width: 800px;
         }
   }
 }

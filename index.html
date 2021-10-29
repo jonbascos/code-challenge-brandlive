@@ -1,166 +1,215 @@
 <!DOCTYPE html>
 <html lang="en"> 
-<head> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <title>Brandlive Code Challenge</title>
-</head>
-<body>
-    <!-- Hero Section -->
-    <section class='heroSectionContainer'>
-        <div class="heroSection">
-            <div class='hero-left'>
-            <p class='eventDate'>
-                Starts on Nov 03, 2021 at 10:00 AM PDT
-            </p>
-            <p class='headline'>
-                Create standout virtual events, minus the cost and stress.
-            </p>
-            <p class='info'>
-                Learn how to create immersive, visually stunning virtual experiences where your video content is the centerpiece.
-            </p>
-            <div class="timer">
-                <span class="timer-days"></span>
-                :
-                <span class="timer-hours"></span>
-                :
-                <span class="timer-minutes"></span>
-                :
-                <span class="timer-seconds"></span>
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <title>Brandlive Code Challenge</title>
+    </head>
+    <body>
+        <!-- Hero Section -->
+        <section class='heroSectionContainer'>
+            <div class="heroSection">
+                <div class='heroLeft'>
+                <p class='eventDate'>
+                    Starts on Nov 03, 2021 at 10:00 AM PDT
+                </p>
+                <p>
+                    <h1 class='headline'>Create standout virtual events, minus the cost and stress.</h2>
+                </p>
+                <p class='info'>
+                    Learn how to create immersive, visually stunning virtual experiences where your video content is the centerpiece.
+                </p>
+                <div id="timer">
+                    <span id="timerDays"></span>
+                    :
+                    <span id="timerHours"></span>
+                    :
+                    <span id="timerMinutes"></span>
+                    :
+                    <span id="timerSeconds"></span>
+                </div>
+                <div>
+                    <span id="timerLabelDays">Days</span>
+                    <span id="timerLabelHours">Hours</span>
+                    <span id="timerLabelMinutes">Minutes</span>
+                    <span id="timerLabelSeconds">Seconds</span>
+                </div>
             </div>
-            <div>
-                <span class="timer-label-days">Days</span>
-                <span class="timer-label-hours">Hours</span>
-                <span class="timer-label-minutes">Minutes</span>
-                <span class="timer-label-seconds">Seconds</span>
+            <div class='wowImageContainer'>
+                <img src="./images/wow.png" alt="Wow!" class='wowImage'>
             </div>
-        </div>
-        <div class='wowImageContainer'>
-            <img src="./images/Create-Virtual-Events--Walkthrough--Gabi-.png" alt="Wow!" class='wowImage'>
-        </div>
-        </div>
-    </section>
-    
-    <!-- Speaker Section -->
-    <section class='speakersContainer'>
-        <div class="speakersSection">
-            <p class='title'>
-                Our Speakers
+            </div>
+        </section>
+        
+        <!-- Speaker Section -->
+        <section class='speakersContainer'>
+            <div class="speakersSection">
+                <p>
+                    <h3 class='title'>Our Speakers</h3>
+                </p>
+                <h2 class='subject'>Meet Your Event Experts</h2>
+                <p class='description'>
+                    Brandlive's line-up of creative leaders are here to help make your biggest event dreams become a reality.
+                </p>
+                <div class='speakerProfileContainer'>
+                    <div class='speakerProfileCard'>
+                        <button class="modal-open" data-modal="modal1">
+                            <img src="./images/SamKolbertHyle.jpg" alt="Sam Kolbert-Hyle profile picture" class='profilePicture'>
+                        </button>
+                        
+                        <div class="profileInfo">
+                            <p class='speakerName'>
+                                Sam Kolbert-Hyle
+                            </p>
+                            <p class='speakerTitle'>
+                                President & CEO of Brandlive
+                            </p>
+                            <p class="speakerInfo">
+                                Under Sam's leadership, Brandlive was recognized by Fast Company as the #1 most...
+                            </p>
+                        </div>
+                    </div>
+                    <div class='speakerProfileCard'>
+                        <button class="modal-open" data-modal="modal2">
+                            <img src="./images/ThomasIwasaki.jpg" alt="Thomas Iwasaki profile picture" class='profilePicture'>
+                        </button>
+                        <div class="profileInfo">
+                            <p class='speakerName'>
+                                Thomas Iwasaki
+                            </p>
+                            <p class='speakerTitle'>
+                                Chief Product Officer
+                            </p>
+                            <p class="speakerInfo">
+                                Thomas expertly leads all marketing and communication efforts, as well as the produ...
+                            </p>
+                        </div>
+                    </div>
+                    <div class='speakerProfileCard'>
+                        <button class="modal-open" data-modal="modal3">
+                            <img src="./images/GabiHague.jpg" alt="Gabi Hague profile picture" class='profilePicture'>
+                        </button>
+                        <div class="profileInfo">
+                            <p class='speakerName'>
+                                Gabi Hague
+                            </p>
+                            <p class='speakerTitle'>
+                                Product Marketing Manager
+                            </p>
+                            <p class="speakerInfo">
+                                FPO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popup Modals -->
+            <!-- Sam -->
+            <div class="modal" id='modal1'>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-close">Close</span>
+                        <h2>Sam Kolbert-Hyle</h2>
+                    </div>
+                    <div class="modal-main">
+                        Under Sam's leadership, Brandlive was recognized by Fast Company as the #1 most awesome company of the 21st century.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thomas -->
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-close">Close</span>
+                        <h2>Thomas Iwasaki</h2>
+                    </div>
+                    <div class="modal-main">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum praesentium sint perspiciatis a placeat ut velit natus optio, nihil porro.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gabi -->
+            <div class="modal" id="modal3">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-close">Close</span>
+                        <h2>Gabi Hague</h2>
+                    </div>
+                    <div class="modal-main">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum praesentium sint perspiciatis a placeat ut velit natus optio, nihil porro.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="productSection">
+            <p>
+                <h3 class='title'>Our Product</h3>
             </p>
-            <h2 class='subject'>Meet Your Event Experts</h2>
+            <h2 class='subject'>FPO Title</h2>
             <p class='description'>
-                Brandlive's line-up of creative leaders are here to help make your biggest event dreams become a reality.
+                Good descriptive writing creates an impression in the reader's mind of an event, a place, a person, or a thing that will set a mood.
             </p>
-            <div class='speakerProfileContainer'>
-                <div class='speakerProfileCard'>
-                    <img src="./images/1634838255518_w1801_h1801.jpg" alt="Sam Kolbert-Hyle profile picture" class='profilePicture' onClick=>
-                    <div class="profileInfo">
-                        <p class='speakerName'>
-                        Sam Kolbert-Hyle
-                        </p>
-                        <p class='speakerTitle'>
-                            President & CEO of Brandlive
-                        </p>
-                        <p class="speakerInfo">
-                            Under Sam's leadership, Brandlive was recognized by Fast Company as the #1 most...
-                        </p>
-                    </div>
+            <div class="video">
+                <a href="https://youtu.be/5j9OpXEMkvg" target="_blank">
+                    <img src="./images/nowStreamingLogo.png" alt="Now Streaming on Brandlive" class="videoScreenShot">
+                </a>
+            </div>
+        </section>
+
+        <!-- Sponsor Section -->
+        <section class="sponsorSection">
+            <p>
+                <h3 class='title'>Our Happy Customers</h3>
+            </p>
+            <h2 class='subject'>Words That Make Us Blush</h2>
+            <div class="sponsorLogoContainer">
+                <div>
+                    <img src="./images/adidasLogo.png" alt="Adidas Logo" class="sponsorLogo">
                 </div>
-                <div class='speakerProfileCard'>
-                    <img src="./images/1634838272411_w1285_h1285.jpg" alt="Thomas Iwasaki profile picture" class='profilePicture'>
-                    <div class="profileInfo">
-                        <p class='speakerName'>
-                        Thomas Iwasaki
-                        </p>
-                        <p class='speakerTitle'>
-                            Chief Product Officer
-                        </p>
-                        <p class="speakerInfo">
-                            Thomas expertly leads all marketing and communication efforts, as well as the produ...
-                        </p>
-                    </div>
+                <div>
+                    <img src="./images/herbalifeLogo.png" alt="Herbalife Logo" class="sponsorLogo">
                 </div>
-                <div class='speakerProfileCard'>
-                    <img src="./images/1634838332068_w1285_h1285.jpg" alt="Gabi Hague profile picture" class='profilePicture'>
-                    <div class="profileInfo">
-                        <p class='speakerName'>
-                        Gabi Hague
-                        </p>
-                        <p class='speakerTitle'>
-                            Product Marketing Manager
-                        </p>
-                        <p class="speakerInfo">
-                            FPO
-                        </p>
-                    </div>
+                <div>
+                    <img src="./images/levisLogo.png" alt="Levi's Logo" class="sponsorLogo">
+                </div>
+                <div >
+                    <img src="./images/kholerLogo.png" alt="Kholer Logo" class="sponsorLogo">
+                </div>
+                <div class="sponsorLogo">
+                    <img src="./images/goproLogo.png" alt="GoPro Logo" class="sponsorLogo">
+                </div>
+                <div >
+                    <img src="./images/meredithLogo.png" alt="Meredith Logo" class="sponsorLogo">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Product Section -->
-    <section class="productSection">
-        <p class='title'>
-            Our Product
-        </p>
-        <h2 class='subject'>FPO Title</h2>
-        <p class='description'>
-            Good descriptive writing creates an impression in the reader's mind of an event, a place, a person, or a thing that will set a mood.
-        </p>
-        <div class="video">
-            <a href="https://youtu.be/5j9OpXEMkvg" target="_blank"><img src="./images/Screen Shot 2021-10-26 at 12.29.07 PM.png" alt="Now Streaming on Brandlive" class="videoScreenShot"></a>
-        </div>
-    </section>
-
-    <!-- Sponsor Section -->
-    <section class="sponsorSection">
-        <p class='title'>
-            Our Happy Customers
-        </p>
-        <h2 class='subject'>Words That Make Us Blush</h2>
-        <div class="sponsorLogoContainer">
-            <div>
-                <img src="./images/1634849040142_w628_h314.png" alt="Adidas Logo" class="sponsorLogo">
-            </div>
-            <div>
-                <img src="./images/1634849095496_w628_h314.png" alt="Herbalife Logo" class="sponsorLogo">
-            </div>
-            <div>
-                <img src="./images/1634849119185_w628_h314.png" alt="Levi's Logo" class="sponsorLogo">
-            </div>
-            <div >
-                <img src="./images/1634849130871_w628_h314.png" alt="Kholer Logo" class="sponsorLogo">
-            </div>
-            <div class="sponsorLogo">
-                <img src="./images/1634849109015_w628_h314.png" alt="GoPro Logo" class="sponsorLogo">
-            </div>
-            <div >
-                <img src="./images/1634849147967_w628_h314.png" alt="Meredith Logo" class="sponsorLogo">
-            </div>
-        </div>
-
-        <!-- Footer Section -->
-        <footer>
-            <div>
-                <img src="./images/Create-Virtual-Events--Walkthrough--Gabi-(1).png" alt="Brandlive Logo" class='logos'>
-            </div>
-            <div class='footerLinks'>
-                <ul>
-                    <li>Terms and Conditions</li>
-                    <li>Privacy Policy</li>
-                </ul>
-            </div>
-            <div>
-                <img src="./images/Screen Shot 2021-10-26 at 12.29.07 PM.png" alt="Now Streaming" class='logos'>
-            </div>
-        </footer>
-    </section>
-    <script src='./scripts/app.js'></script>
-</body>
+            <!-- Footer Section -->
+            <footer>
+                <div>
+                    <img src="./images/brandliveLogo.png" alt="Brandlive Logo" class='logos'>
+                </div>
+                <div class='footerLinks'>
+                    <ul>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./images/nowStreamingLogo.png" alt="Now Streaming" class='logos'>
+                </div>
+            </footer>
+        </section>
+        <script src='./scripts/app.js'></script>
+    </body>
 </html>
