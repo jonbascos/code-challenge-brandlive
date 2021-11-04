@@ -1,6 +1,6 @@
 // Countdown Timer 
 
-const endDate = new Date("Nov 03, 2021 10:00:00").getTime()
+const endDate = new Date("Nov 03, 2022 10:00:00").getTime()
 
 const timer = setInterval(() => {
     const now = new Date().getTime()
